@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+<main>
+
+    <div class="wrapper">
+        <h1 class="date"><%= date %></h1>
+    </div>
+
+    <div class="wrapperForForm">
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off"/>
+            <button class="addButton" type="/submit" name="list" value="<%= date %>>">+</button>
+        </form>
+        <ul class="listOfToDo">
+            <% for(const item of locals.toDoTodayList){ %>
+
+                <li class="item_list">
+                    <input type="checkbox" id="item" name="item"/>
+                    <label for="item"><%= item %></label></li>
+
+            <% } %>
+        </ul>
+    </div>
+
+
+</main>
+
+
+<%- include('partials/footer.ejs') %>

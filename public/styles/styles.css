@@ -1,0 +1,147 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    font-family: "helvetica neue"
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F6F4EB;
+    margin: 0;
+}
+
+
+.navbar {
+    display: flex;
+    padding: 10px;
+}
+
+.navbar_list {
+    list-style: none; /* Убираем маркеры списка */
+    display: flex;
+    padding: 0;
+    gap: 0 20px;
+}
+
+
+.navbar_item {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.navbar_item a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+.navbar_item a:hover {
+    color: #ddd;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+}
+
+.date {
+    margin: 0;
+    font-size:2em;
+    color: #fff;
+
+}
+
+.wrapper{
+    width: 400px;
+    padding: 20px 50px;
+    margin: 30px auto;
+    background-color: #FBA1B7;
+    border-radius: 20px;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapperForForm{
+    margin: 0 auto;
+}
+
+.listOfToDo {
+    padding-left: 0;
+    margin: 0;
+}
+
+.footer{
+    margin: 0 auto;
+}
+.item{
+    background-color: #fff;
+}
+.item,
+.item_list{
+    width: 400px;
+}
+
+input[type="text"]{
+    display: inline;
+    width: 320px;
+    height: 70px;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    border : none;
+}
+
+input[type="text"]:focus{
+    content: '';
+    box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+input[type="text"]:focus-visible{
+    outline: none;
+}
+
+.addButton{
+
+    color: #fff;
+    font-size: 2em;
+    border-color: transparent;
+    background-color: #FFD9C0;
+    min-height: 50px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.item_list{
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 5px 0 0 2px #f1f1f1;
+    font-size: 1.5em;
+}
+
+.item_list label {
+    padding: 20px;
+}
+
+.item_list input[type="checkbox"]{
+    margin: 20px;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
